@@ -21,8 +21,14 @@ Exposing the version number to the build server to version the build itself.
 Patching AssemblyInfo.cs (and similar) files with the version number during the build, so the version number is embedded within the compiled binaries themselves.
 
 ```bash
+# Install Git Version (Windows) via Chocolatey - https://chocolatey.org/install
+choco install gitversion.portable
+
+# Configure Git Version
 gitversion init
 ```
+
+See [git version Yaml](./GitVersion.yml) for specific settings that are generated from the command line.
 
 ## Conventional Commits
 
@@ -45,9 +51,11 @@ The commit contains the following structural elements, to communicate intent to 
 3. **BREAKING CHANGE:** a commit that has a footer BREAKING CHANGE:, or appends a ! after the type/scope, introduces a breaking API change (correlating with MAJOR in Semantic Versioning). A BREAKING CHANGE can be part of commits of any type.
 types other than fix: and feat: are allowed, for example @commitlint/config-conventional (based on the the Angular convention) recommends build:, 
 
-4. **chore:**, ci:, docs:, style:, refactor:, perf:, test:, and others.
+4. **chore:, ci:, docs:, style:, refactor:, perf:, test:**, and others.
 
 5. footers other than BREAKING CHANGE: <description> may be provided and follow a convention similar to [git trailer](https://git-scm.com/docs/git-interpret-trailers) format.
+
+Conventional commit [examples](https://www.conventionalcommits.org/en/v1.0.0/#examples).
 
 ## References
 
